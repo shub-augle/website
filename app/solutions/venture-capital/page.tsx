@@ -1,0 +1,108 @@
+import SolutionLayout, { VerticalData } from '../SolutionLayout';
+
+const data: VerticalData = {
+  slug: 'venture-capital', activeSlug: 'venture-capital',
+  breadcrumbLabel: 'Venture capital + PE',
+  eyebrow: 'Solutions · Venture capital + PE',
+  heroTitle: 'Know the IC<br>objections before<br><em class="italic text-terracotta">you walk in.</em>',
+  heroBody: 'Every investment thesis has a critical assumption that hasn\'t been stress-tested. The market size that\'s sourced from a single analyst report. The competitive moat claim that doesn\'t survive scrutiny of the incumbent\'s roadmap. The unit economics that only work at a scale the company hasn\'t reached. Augle runs the adversarial review before capital is deployed.',
+  personas: [
+    'VC partners stress-testing investment theses pre-IC',
+    'PE associates conducting diligence on acquisition targets',
+    'Growth equity teams evaluating market sizing assumptions',
+    'Portfolio operations teams assessing competitive positioning',
+  ],
+  panelLabel: 'Session configuration · Venture capital + PE',
+  panelRows: [
+    { label: 'Mode', value: 'Letters & Science' },
+    { label: 'Guardian', value: 'Financial integrity', accent: true },
+    { label: 'Depth', value: 'Standard · Deep' },
+    { label: 'Documents', value: 'Memos · models · market reports · CIMs' },
+    { label: 'SVS checks', value: 'Market data recency · source attribution · forecast vs. historical distinction' },
+    { label: 'Output', value: 'Finding · confidence grade · key risks verbatim · audit trail' },
+  ],
+  problemTitle: 'The IC objection<br>you haven\'t<br>prepared for.',
+  problemBody: 'Investment committee members will challenge your TAM methodology, your moat durability, your unit economics assumptions, and your competitive analysis. Augle surfaces those challenges before the meeting — with resolution conditions so you can prepare specific answers, not general defences.',
+  problemQuestions: [
+    '"Is the TAM based on the serviceable addressable market or the total theoretical maximum?"',
+    '"Does the competitive moat claim survive an analysis of the incumbent\'s public roadmap?"',
+    '"Do the unit economics work at the growth rate assumed or only at full steady-state scale?"',
+    '"What will the skeptical IC partner say about the market data sourcing?"',
+  ],
+  problemItems: [
+    { title: 'TAM estimates sourced from single analyst reports', body: 'Financial integrity mode flags market data sourced from a single analyst report, unattributed consultant estimates, or forecasts presented as historical actuals. The Cartographer triangulates TAM methodology against independent sources.' },
+    { title: 'Moat claims that don\'t survive incumbent scrutiny', body: 'The Contrarian specifically targets competitive moat claims — checking them against the incumbent\'s publicly announced roadmap, recent product releases, and strategic filings. A moat claim that doesn\'t survive a ten-minute review of the competitor\'s developer blog won\'t survive IC.' },
+    { title: 'Unit economics that only work at unvalidated scale', body: 'The Methodologist evaluates whether your unit economics assumptions hold at the growth rate the model assumes, or only at a steady-state scale the company hasn\'t demonstrated. External validity problems in financial projections surface here.' },
+    { title: 'The IC objection you haven\'t prepared for', body: 'The Contrarian runs at maximum temperature to surface the strongest version of the IC skeptic\'s challenge. Unresolved objections appear verbatim with resolution conditions. The deal team that knows these going in controls the IC conversation.' },
+  ],
+  useCasesTitle: 'Two sessions.<br>Two moments before IC.',
+  useCasesBody: 'Each scenario is drawn from the Augle Use Case Compendium — hypothetical sessions illustrating deliberation behaviour at critical investment decision points.',
+  useCases: [
+    {
+      num: 'Use case 01 of 02 · Venture capital + PE',
+      name: 'The Investment Thesis Review',
+      persona: 'Principal · Series B growth fund · Pre-IC memo finalisation',
+      badge: 'Standard depth · document ingestion', badgeVariant: 'standard',
+      question: '"Is the investment thesis for this vertical SaaS company\'s Series B defensible at IC, and what are the two or three objections we need to resolve before we go in?"',
+      highlights: [
+        { agent: 'Cartographer', text: 'Settled: the category exists and the company has demonstrated product-market fit in the SMB segment. Contested: whether the enterprise motion is validated and whether the unit economics hold at enterprise deal sizes. Unknown: Salesforce\'s published roadmap includes two features directly competitive with the company\'s primary differentiator.' },
+        { agent: 'Methodologist', text: 'TAM methodology: the $12B figure is sourced from a single IDC analyst report published in 2022. No triangulation against Gartner or internal build-up methodology. The enterprise expansion assumption is not validated by existing enterprise ACV data.' },
+        { agent: 'Contrarian', text: 'Strong objection: "The TAM is theoretical maximum, not addressable. The enterprise motion is aspirational, not demonstrated. Salesforce\'s Q2 release includes the workflow automation feature that\'s currently the primary differentiator. IC will find all three of these — they need to be in the memo, not surfaced in the room."' },
+        { agent: 'Pragmatist', text: 'Three specific IC preparation items: (1) Triangulate TAM with bottom-up build; (2) reframe enterprise claims around pipeline, not projection; (3) address Salesforce roadmap proactively with the technical differentiation argument.' },
+      ],
+      outcome: { label: 'Session output', rows: [
+        { key: 'Finding', val: 'Probable at SMB level — Contested at enterprise scale given absence of validated enterprise motion' },
+        { key: 'Key objection', val: 'Salesforce roadmap competitive overlap not addressed in memo — IC will raise it' },
+        { key: 'TAM gap', val: 'Single-source IDC estimate without triangulation — IC will challenge the methodology' },
+        { key: 'IC prep', val: 'Three specific pre-IC items with resolution conditions — completable before memo deadline' },
+      ]},
+      value: 'The Salesforce roadmap conflict wasn\'t in the competitive analysis. The TAM discrepancy was in the memo but hadn\'t been flagged. The partner who walked into IC knowing both objections controlled the room. The one who heard them for the first time didn\'t.',
+    },
+    {
+      num: 'Use case 02 of 02 · Venture capital + PE',
+      name: 'The Acquisition Diligence Review',
+      persona: 'VP · Mid-market PE fund · Proprietary deal · Pre-LOI',
+      badge: 'Deep · flagship Contrarian', badgeVariant: 'deep',
+      question: '"Do the revenue synergy assumptions in our acquisition model hold under scrutiny, and what\'s the strongest case against our post-close integration timeline?"',
+      highlights: [
+        { agent: 'Cartographer', text: 'Settled: the companies have complementary customer bases with limited overlap. Contested: whether cross-sell synergies are achievable within the 18-month timeline given the integration complexity. Unknown: the target\'s CRM data quality has not been assessed and the cross-sell model assumes clean customer data.' },
+        { agent: 'Methodologist', text: 'External validity: the revenue synergy assumptions are built from the fund\'s comparable — a deal with a materially different integration complexity. The comparator is not a valid precedent for this acquisition\'s integration timeline.' },
+        { agent: 'Contrarian', text: 'Strong objection: "The 18-month synergy realisation timeline is based on a comparable with 40% lower integration complexity. The CRM data quality assumption is untested. The sensitivity case in the model doesn\'t have a scenario where synergies are delayed 12 months — which is what the comparable\'s actual realisation looked like."' },
+      ],
+      outcome: { label: 'Session output', rows: [
+        { key: 'Finding', val: 'Contested — synergy timeline not supported by the applicable comparable; CRM data quality assumption untested' },
+        { key: 'Key risk', val: '18-month synergy timeline built on inapplicable comparable — actual comparable realised in 30 months' },
+        { key: 'Next step', val: 'Add 12-month delay sensitivity case; commission CRM data quality assessment as condition of LOI' },
+      ]},
+      value: 'The adoption rate assumption was buried in a tab of the model. The CRM integration risk was described in the CIM as "manageable." Neither had been stress-tested against the fund\'s own comparable. The sensitivity case was added before the LOI was signed, not discovered in the 100-day plan.',
+    },
+  ],
+  howTitle: 'Built for the investment<br>decision lifecycle.',
+  howSteps: [
+    { n: 1, title: 'Submit your investment question and upload documents', body: 'Upload the IC memo, CIM, or model alongside your investment question. The Guardian is set to financial integrity mode — market data recency, source attribution, and forecast vs. historical distinctions are validated before deliberation begins.' },
+    { n: 2, title: 'Financial integrity mode validates market data and citations', body: 'Every market data point is checked for source attribution and recency. Single-source estimates, unattributed consultant figures, and forecasts presented as historical actuals are flagged before they enter the evidence base.' },
+    { n: 3, title: 'The Contrarian runs the skeptical IC member\'s objections', body: 'The Contrarian is calibrated to surface the TAM triangulation question, the moat durability challenge, and the unit economics sensitivity that the skeptical IC member will raise. Unresolved objections appear verbatim with resolution conditions.' },
+    { n: 4, title: 'You get a finding and a pre-IC action list', body: 'The Pragmatist translates unresolved objections into concrete pre-IC actions — TAM methodologies to add, competitive analyses to update, sensitivities to model. You walk into IC having already addressed the questions that would otherwise define the conversation.' },
+  ],
+  configLabel: 'Financial integrity mode · Guardian configuration',
+  configRows: [
+    { key: 'Market data', val: 'Market size estimates flagged when sourced from single analyst report, unattributed consultant research, or data older than 24 months' },
+    { key: 'Forecast vs. actual', val: 'Forward projections presented as historical performance flagged SVS_MISREPRESENTED — evidence node capped at Gap' },
+    { key: 'Source recency', val: 'Market data recency checked against publication date — outdated market sizing flagged for triangulation' },
+    { key: 'Financial advice', val: 'Synthesizer architecturally forbidden from producing buy/sell/long/short framing — finding is calibrated evidence assessment, not investment advice' },
+    { key: 'Audit trail', val: 'Full session record exportable — SVS log, objection register with IC preparation items, confidence grades' },
+  ],
+  whyTitle: 'What makes it different<br>from a standard diligence process.',
+  whyCards: [
+    { title: 'Runs the skeptical IC member\'s objections', body: 'The Contrarian is calibrated to surface the strongest version of every challenge to your thesis — the TAM triangulation question, the moat durability challenge, the unit economics sensitivity. Unresolved objections appear verbatim with resolution conditions. The deal team that knows these going in controls the IC conversation.' },
+    { title: 'Validates market data before it enters the memo', body: 'Financial integrity mode flags market data sourced from a single analyst report, unattributed consultant estimates, or forecasts presented as historical actuals. A TAM figure that doesn\'t survive scrutiny of its sourcing methodology doesn\'t survive IC.' },
+    { title: 'Produces a confidence-graded risk register', body: 'Every investment thesis has uncertainties. Augle grades them — Established, Probable, Contested, or Gap — and distinguishes between risks that are manageable and objections that are unresolved. The IC memo built from a confidence-graded risk register is a stronger memo.' },
+    { title: 'No stake in the investment', body: 'Internal deal teams have built conviction through the diligence process. Augle has none of that conviction. It produces the finding the evidence supports — including the finding that the evidence doesn\'t support the thesis as written.' },
+    { title: 'Resolution conditions, not uncertainty acknowledgment', body: 'Every unresolved objection includes a resolution condition — specifically what market data, competitive analysis, or model sensitivity would close it. "There is uncertainty" is not an acceptable IC preparation strategy.' },
+    { title: '$0.60 per Standard session · $1.20 for Deep', body: 'A Standard deliberation costs $0.60. A Deep session with the flagship Contrarian costs $1.20. A failed investment costs orders of magnitude more. The economics of pre-IC diligence using Augle are straightforward.' },
+  ],
+  ctaTitle: 'Know the IC objections<br>before you walk in.',
+  ctaBody: 'Join the waitlist and get one Standard session free. Run it on a real investment question before your next IC meeting.',
+};
+
+export default function VentureCapitalPage() { return <SolutionLayout v={data} />; }

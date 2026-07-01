@@ -1,0 +1,132 @@
+import SolutionLayout, { VerticalData } from '../SolutionLayout';
+
+const data: VerticalData = {
+  slug: 'universities', activeSlug: 'universities',
+  breadcrumbLabel: 'Universities + academia',
+  eyebrow: 'Solutions · Universities + academia',
+  heroTitle: 'The committee<br>already knows<br><em class="italic text-terracotta">your weaknesses.</em>',
+  heroBody: 'Dissertation defences, grant applications, and peer review processes all share the same structure: your work will face the strongest objections the field can muster. Augle runs those objections before the stakes are live — mapping what\'s settled, what\'s contested, and exactly where your methodology is most exposed.',
+  personas: [
+    'PhD candidates preparing for defence',
+    'Grant applicants ahead of study section review',
+    'Research faculty preparing manuscripts for submission',
+    'Lab directors stress-testing landmark findings',
+    'Pre-submission peer review preparation',
+  ],
+  panelLabel: 'Session configuration · Academia',
+  panelRows: [
+    { label: 'Mode', value: 'Letters & Science' },
+    { label: 'Guardian', value: 'Academic integrity', accent: true },
+    { label: 'SVS checks', value: 'Retraction DB · preprint flag · peer review status' },
+    { label: 'Documents', value: 'Methodology chapters · drafts · grant sections' },
+    { label: 'Depth', value: 'Standard or Deep' },
+    { label: 'Output', value: 'Evidence landscape · objection register · actionable pre-submission edits' },
+  ],
+  problemTitle: 'You don\'t find out<br>what\'s wrong until<br>it\'s too late.',
+  problemBody: 'The committee has weeks to find problems in your methodology. You have one afternoon to defend it. Supervisors give broad guidance. Colleagues offer encouragement. Neither surfaces the precise objection the sharpest examiner in the room will use. Augle does.',
+  problemQuestions: [
+    '"Does my operationalisation support the causal claim I\'m making?"',
+    '"Which of my grant\'s innovation claims are most exposed to prior art challenge?"',
+    '"What will the strongest peer reviewer say about my effect size?"',
+    '"Is the replication record for this effect consistent with my manuscript\'s framing?"',
+    '"Are any of my significance citations flagged as preprints or retracted?"',
+  ],
+  problemItems: [
+    { title: 'Construct validity gaps you haven\'t named', body: 'The Methodologist evaluates whether your operationalisation actually measures the construct you claim. Committees penalise evasion more than limitation — the candidate who names the problem before being asked demonstrates command of the field.' },
+    { title: 'Preprint citations in significance claims', body: 'The Guardian\'s SVS cross-references every citation against retraction databases and peer review status. Study sections routinely scrutinise preprint citations in significance claims — both affected evidence nodes are automatically capped at Probable and flagged for substitution.' },
+    { title: 'Innovation claims that intersect with prior art', body: 'The Contrarian actively searches for functionally equivalent prior work. If a parallel publication from a competing lab shares architectural similarities with your innovation claim, it will surface — before your study section finds it, not after.' },
+    { title: 'The objection you haven\'t prepared for', body: "Augle's Contrarian runs at maximum temperature specifically to surface the unexpected objection — the one your supervisor didn't raise and your colleagues didn't think of. Unresolved Strong objections appear verbatim in the output so you know exactly what still needs answering." },
+  ],
+  useCasesTitle: 'Three sessions.<br>Three moments that matter.',
+  useCasesBody: 'Each scenario is drawn from the Augle Use Case Compendium — hypothetical sessions illustrating realistic deliberation behaviour across the academic research lifecycle.',
+  useCases: [
+    {
+      num: 'Use case 01 of 03 · Universities + academia',
+      name: 'The Dissertation Defence',
+      persona: 'PhD Candidate, Cognitive Science · University of Edinburgh',
+      badge: 'Standard depth', badgeVariant: 'standard',
+      question: '"Does experience sampling via smartphone provide sufficient ecological validity to support attentional state claims in naturalistic environments?"',
+      highlights: [
+        { agent: 'Cartographer', text: 'Settled: ESM is established. Contested: whether smartphone notification triggers introduce systematic attentional bias. Unknown: no study has directly compared notification-triggered vs. researcher-initiated ESM on attentional outcomes.' },
+        { agent: 'Methodologist', text: 'Construct validity issue: the 3-item Likert operationalisation of attentional state has no published reliability data for smartphone delivery contexts.' },
+        { agent: 'Contrarian', text: 'Strong objection (Unresolved): "Self-report triggered by an attentional interruption is not a measure of naturalistic attention — it is a measure of post-interruption attentional recovery. The thesis conflates them throughout."' },
+        { agent: 'Synthesizer', text: 'Probable for relative comparisons between conditions. Contested for absolute naturalistic attentional state claims. The causal entanglement objection is the committee\'s most likely line of attack.' },
+      ],
+      outcome: { label: 'Session output', rows: [
+        { key: 'Finding', val: 'Contested — absolute naturalistic attentional claims not supportable as written' },
+        { key: 'SVS', val: 'All citations verified. No retracted papers.' },
+        { key: 'Key objection', val: 'Causal entanglement — notification triggers the interruption it claims to measure' },
+        { key: 'Next step', val: 'Reframe claim as post-interruption attentional recovery. Prepare committee response before defence.' },
+      ]},
+      value: 'She walked in thinking the objection was about noise. She walked out knowing the committee\'s real argument is causal entanglement — a philosophically sharper objection that requires a different answer. She had three weeks to prepare it instead of hearing it for the first time in the room.',
+    },
+    {
+      num: 'Use case 02 of 03 · Universities + academia',
+      name: 'The Grant Application Review',
+      persona: 'Associate Professor, Computational Linguistics · Pre-submission, NIH R01',
+      badge: 'Standard depth · document ingestion', badgeVariant: 'standard',
+      question: '"Are the significance and innovation claims in this grant application supported by the current evidence base, and which are most vulnerable to study section challenge?"',
+      highlights: [
+        { agent: 'Guardian SVS', text: '28 of 31 citations verified. Two papers in the innovation section are preprints — neither peer-reviewed. Auto-flagged SVS_UNVERIFIED. Both evidence nodes capped at Probable.' },
+        { agent: 'Contrarian', text: 'Moderate objection: "The application claims the first computational model to account for bilateral recruitment under load. A 2024 Friederici lab paper has functionally equivalent architecture. This will be raised as prior art by Friederici-adjacent reviewers."' },
+        { agent: 'Pragmatist', text: '(1) Replace preprint citations with peer-reviewed alternatives — they exist. (2) Differentiate innovation claim from 2024 Friederici paper with one specific technical distinguisher. Both edits close predictable study section objections.' },
+      ],
+      outcome: { label: 'Session output', rows: [
+        { key: 'SVS flags', val: '2 × SVS_UNVERIFIED preprints in significance claims' },
+        { key: 'Prior art', val: '2024 Friederici lab paper — functionally equivalent architecture' },
+        { key: 'Edits needed', val: 'Preprint substitution + two-sentence innovation differentiator' },
+        { key: 'Timeline', val: 'Both edits completable in one afternoon with 10 days to deadline' },
+      ]},
+      value: 'The professor had strong conviction in the science. Augle found the two places the study section would focus — a prior art problem he hadn\'t encountered and two citation vulnerabilities he could fix in an afternoon. The science didn\'t change. The application\'s defensibility did.',
+    },
+    {
+      num: 'Use case 03 of 03 · Universities + academia',
+      name: 'The Replication Crisis Check',
+      persona: 'Postdoctoral Researcher, Social Psychology · Pre-submission manuscript',
+      badge: 'Deep · flagship Contrarian', badgeVariant: 'deep',
+      question: '"Does the priming literature support the effect size claimed in this manuscript, given the replication record across published and pre-registered studies?"',
+      highlights: [
+        { agent: 'Cartographer', text: 'Settled: priming effects exist in constrained laboratory conditions. Contested: whether original effect sizes replicate outside original lab context. Unknown: pre-registered replication rate specifically for this effect type.' },
+        { agent: 'Methodologist', text: 'External validity concern: original studies used WEIRD samples exclusively. Effect size meta-analysis includes original lab — potential allegiance bias inflating the estimate.' },
+        { agent: 'Contrarian', text: 'Strong objection: "The claimed d=0.42 draws heavily from pre-replication crisis studies. Post-2015 pre-registered replications show d=0.18 with wide CI. The manuscript\'s effect size claim is not supported by the contemporary replication record."' },
+      ],
+      outcome: { label: 'Session output', rows: [
+        { key: 'Finding', val: 'Contested — claimed effect size not supported by post-2015 pre-registered replication record' },
+        { key: 'Revision', val: 'Update effect size estimate to contemporary replication record before submission' },
+        { key: 'Framing', val: 'Frame as contribution to replication literature rather than confirmation of legacy effect' },
+      ]},
+      value: 'The reviewer who specialises in replication methodology would have rejected the manuscript on the effect size claim alone. Augle surfaced this before submission — the researcher revised the framing and the effect size estimate, and submitted a paper that could survive the scrutiny it would face.',
+    },
+  ],
+  howTitle: 'Built for the academic<br>research lifecycle.',
+  howSteps: [
+    { n: 1, title: 'Submit your question and upload your documents', body: 'Upload your methodology chapter, grant draft, or manuscript sections alongside your research question. The Topic Architect parses the question, sets the Guardian to academic integrity mode, and begins the deliberation.' },
+    { n: 2, title: 'The Guardian authenticates every source in real time', body: 'Every citation is cross-referenced against retraction databases and checked for peer review status. Preprints are flagged. Retracted papers are blocked. Your evidence base is authenticated before any deliberation begins.' },
+    { n: 3, title: 'The Contrarian plays the examiner', body: 'Running at maximum temperature to maximise variation, the Contrarian must steelman your methodology before challenging it. Each objection specifies a resolution condition — exactly what evidence or framing would close it.' },
+    { n: 4, title: 'You get the finding — and the objections that remain', body: 'The Synthesizer produces a calibrated confidence grade. Every unresolved objection surfaces verbatim in the output alongside the finding that triggered it. The Pragmatist translates this into specific pre-submission or pre-defence action items.' },
+  ],
+  configLabel: 'Academic integrity mode · Guardian configuration',
+  configRows: [
+    { key: 'Retraction check', val: 'Every cited paper cross-referenced against Retraction Watch and publisher retraction databases before entering the evidence nodes registry' },
+    { key: 'Preprint flag', val: 'arXiv, bioRxiv, SSRN, and similar preprint servers flagged SVS_UNVERIFIED — evidence node capped at Probable, flag raised to session audit trail' },
+    { key: 'Self-citation ratio', val: 'Concentration of self-citation in significance claims monitored and flagged — Informational flag raised when ratio exceeds field norms' },
+    { key: 'Statistical claims', val: 'Effect size claims validated against cited study design — GRADE CHALLENGE fires when Synthesizer claim exceeds evidentiary warrant' },
+    { key: 'Prior art search', val: 'Contrarian actively surfaces parallel publications and functionally equivalent prior work — particularly relevant for innovation claims in grant applications' },
+    { key: 'Audit trail', val: 'Full session record exportable — SVS verification log, objection register, confidence grades, and all Pragmatist action items' },
+  ],
+  whyTitle: 'What makes it different<br>from everything else.',
+  whyCards: [
+    { title: 'It plays the role of your sharpest examiner', body: "The Contrarian is required to steelman your methodology before challenging it — it produces the strongest possible version of your argument and then finds the objection that argument doesn't fully answer. This is structurally different from asking a colleague for feedback on a draft they want to succeed." },
+    { title: 'Every citation is authenticated, not assumed', body: "The Guardian's Source Verification Service authenticates every citation before it enters the evidence base. A finding built on a retracted paper is a finding built on nothing. Academic integrity mode adds retraction database checks and preprint flagging that standard literature review tools don't perform." },
+    { title: 'The objections that remain are the ones that matter', body: 'Unresolved Strong objections surface verbatim in the final output alongside their resolution conditions. You know exactly what the examiner will say, in what form, and precisely what evidence or reframing would close it. General uncertainty acknowledgments are prohibited — each objection must specify its resolution condition.' },
+    { title: 'Gap findings are first-class outputs, not failures', body: "When the evidence is genuinely insufficient to support a claim — because the relevant study hasn't been done, or the construct hasn't been operationalised for your context — the finding says so explicitly. A Gap grade tells you what isn't knowable from the current evidence base. That's more valuable than a confident wrong answer." },
+    { title: 'Document ingestion runs through the same architecture', body: 'Uploading your methodology chapter or grant draft doesn\'t bypass the deliberation — it feeds it. Evidence from your documents enters the same evidence nodes registry, subject to the same SVS authentication and Methodologist validity assessment as any other source.' },
+    { title: '$0.60 per Standard session', body: 'A Standard deliberation — full seven-agent ensemble, three phases, Guardian active — costs $0.60. A dissertation committee costs three years and a defence. A study section rejection costs months of revision time. The economics of running Augle before those moments are straightforward.' },
+  ],
+  ctaTitle: 'Run your methodology<br>before the committee does.',
+  ctaBody: 'Join the waitlist and get one Standard session free. Run it on a real question before your next deadline.',
+};
+
+export default function UniversitiesPage() {
+  return <SolutionLayout v={data} />;
+}

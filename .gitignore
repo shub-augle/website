@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local form submission storage (placeholder until a real backend exists)
+/data/*.jsonl
+
+# original delivered zip fragments, kept only as a reference backup
+/_source-fragments

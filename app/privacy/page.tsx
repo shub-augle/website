@@ -20,7 +20,7 @@ const TOC = [
 export default function PrivacyPage() {
   return (
     <div className="bg-sand min-h-screen">
-      <Nav activeRoute="/company" />
+      <Nav activeRoute="/about" />
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]} />
 
       {/* HEADER */}

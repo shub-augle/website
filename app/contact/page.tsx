@@ -96,7 +96,7 @@ export default function ContactPage() {
 
   return (
     <div className="bg-sand min-h-screen">
-      <Nav activeRoute="/company" />
+      <Nav activeRoute="/about" />
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Company', href: '/company' }, { label: 'Contact' }]} />
 
       {/* HERO */}

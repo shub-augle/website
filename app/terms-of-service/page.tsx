@@ -20,7 +20,7 @@ const TOC = [
 export default function TermsOfServicePage() {
   return (
     <div className="bg-sand min-h-screen">
-      <Nav activeRoute="/company" />
+      <Nav activeRoute="/about" />
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Terms of Service' }]} />
 
       {/* HEADER */}

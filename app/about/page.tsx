@@ -83,7 +83,7 @@ const CONTACT_ROWS = [
 export default function AboutPage() {
   return (
     <div className="bg-sand min-h-screen">
-      <Nav activeRoute="/company" />
+      <Nav activeRoute="/about" />
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
 
       {/* HERO */}

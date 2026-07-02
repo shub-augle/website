@@ -76,9 +76,8 @@ export default function Footer() {
             <div className="font-mono text-[10px] tracking-[0.08em] text-[#6A645E] uppercase mb-4">Company</div>
             <div className="flex flex-col gap-[11px]">
               <Link href="/about" className="text-[14px] text-[#B0ADA5] hover:text-white transition-colors no-underline">About Augle</Link>
-              <Link href="/team" className="text-[14px] text-[#B0ADA5] hover:text-white transition-colors no-underline">Team</Link>
+              <Link href="/about" className="text-[14px] text-[#B0ADA5] hover:text-white transition-colors no-underline">Team</Link>
               <Link href="/research" className="text-[14px] text-[#B0ADA5] hover:text-white transition-colors no-underline">Research</Link>
-              <Link href="/responsible-ai" className="text-[14px] text-[#B0ADA5] hover:text-white transition-colors no-underline">Responsible AI</Link>
               <Link href="/careers" className="text-[14px] text-[#B0ADA5] hover:text-white transition-colors no-underline">Careers</Link>
               <Link href="/contact" className="text-[14px] text-[#B0ADA5] hover:text-white transition-colors no-underline">Contact</Link>
             </div>

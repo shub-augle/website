@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { label: 'Outcomes', href: '/outcomes' },
   { label: 'Index', href: '/index' },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'Company', href: '/company' },
+  { label: 'Company', href: '/about' },
 ];
 
 export default function Nav({ activeRoute }: NavProps) {
